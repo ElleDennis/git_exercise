@@ -1,0 +1,15 @@
+<% @users.each do |gram| %>
+  <div>
+    <div>
+      <div>Me</div>
+    <div><%= link_to user.created_at, user %></div>
+    <div><%= link_to 'X', user, method: :delete %></div>
+  </div>
+  </div>
+      <div><%=user.name %></div>
+      <div><%=user.email %></div>
+    </div>
+  </div>
+
+  <hr>
+<% end %>
