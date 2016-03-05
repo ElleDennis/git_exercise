@@ -8,7 +8,8 @@ class UsersController < ApplicationController
   end
 
    def create
-     @user = User.new(params.require(:gram).permit(:name, :email))
+     @user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation))
+
     if @user.save
       redirect_to @user
     else
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
+      @grams = @user.grams.page(params[:page]).per(5)
     end
 
     def destroy
