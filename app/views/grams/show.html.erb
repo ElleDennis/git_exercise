@@ -3,7 +3,12 @@
       <div>Me</div>
     <div><%= @gram.created_at %></div>
 </div>
-  </div>
+</div>
+
+  <div><%= image_tag(@gram.image_url(:cropped)) %></div>
+
+
+
       <div><%= @gram.title %></div>
       <div><%= country_name(@gram.country_code) %></div>
       <div><%= @gram.content %></div>
