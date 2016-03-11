@@ -50,6 +50,10 @@ group :development do
   gem 'spring'
 end
 
+group :development, :test do
+  gem 'dotenv-rails'
+end
+
 gem 'country_select'
 gem 'kaminari'
 gem 'carrierwave'
