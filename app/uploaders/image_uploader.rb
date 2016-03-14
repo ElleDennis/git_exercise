@@ -8,7 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
   version :standard do
-    cloudinary_transformation width: 600, height: 600, crop: :pad, background: 'black'
+    cloudinary_transformation width: 500, height: 500, crop: :pad, background: 'black'
   end
 
   version :cropped do
@@ -16,7 +16,7 @@ class ImageUploader < CarrierWave::Uploader::Base
         transformation:
           [
             { crop: :crop, gravity: :custom },
-            { width: 600, height: 600, crop: :fill },
+            { width: 500, height: 500, crop: :fill },
           ]
       )
     end
