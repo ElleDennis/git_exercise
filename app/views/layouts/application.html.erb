@@ -2,9 +2,6 @@
 <html>
 <head>
   <title>Get This, Make That</title>
-  <h2><center>Post & part with</center></h2>
-  <h2><center>Cruise & grab</center></h2>
-  <h2>Leftover or unwanted home improvement materials.</h2>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -29,12 +26,16 @@
 
 
         <% if current_user %>
-          <li><%= link_to 'My Get This, Make That Post Pics', user_path(current_user) %></li>
+          <li><%= link_to 'Get This, Make That', user_path(current_user) %></li>
           <li><%= link_to 'Sign Out', sign_out_path, method: :delete %></li>
         <% else %>
           <li><%= link_to 'Sign Up', new_user_path %></li>
           <li><%= link_to 'Sign In', sign_in_path %></li>
         <% end %>
+
+<p><center>Post & part with</center></p>
+<p><center>Cruise & grab</center></p>
+<p>Leftover or unwanted home improvement materials.</p>
 
       </ul>
     </div>
