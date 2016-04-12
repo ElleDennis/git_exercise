@@ -1,5 +1,11 @@
 <% if current_user %>
   <div class='new-gram text-center'>
+
+<p><center>Post & part with</center></p>
+<p><center>or</center></p>
+<p><center>Cruise & grab</center></p>
+<p><center>Leftover or unwanted home improvement materials</center></p><br>
+
   <h2>To Post Materials</h2>
   <h3>Click on Camera</h3>
     <%= link_to icon('camera'), new_gram_path %>
@@ -44,8 +50,3 @@
   <%= paginate @grams %>
 </div>
 
-
-<p><center>Post & part with</center></p>
-<p><center>or</center></p>
-<p><center>Cruise & grab</center></p>
-<p><center>Leftover or unwanted home improvement materials</center></p><br>
