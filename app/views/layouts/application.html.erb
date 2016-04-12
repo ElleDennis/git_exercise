@@ -29,7 +29,7 @@
           <li><%= link_to 'Get This, Make That', user_path(current_user) %></li>
           <li><%= link_to 'Sign Out', sign_out_path, method: :delete %></li>
         <% else %>
-          <li><%= link_to 'Sign Up', new_user_path %></li>
+          <li><%= link_to 'Sign Up to Post', new_user_path %></li>
           <li><%= link_to 'Sign In', sign_in_path %></li>
         <% end %>
 
@@ -37,10 +37,6 @@
     </div>
   </div>
 </nav>
-<p><center>Post & part with</center></p>
-<p><center>or</center></p>
-<p><center>Cruise & grab</center></p>
-<p><center>Leftover or unwanted home improvement materials</center></p><br>
 
 <div class="container">
   <% if flash[:notice] %>
@@ -55,10 +51,13 @@
   <!-- !!!!!OVER HERE!!!!! -->
 
 
-
-
   <%= yield %>
 </div>
+
+<p><center>Post & part with</center></p>
+<p><center>or</center></p>
+<p><center>Cruise & grab</center></p>
+<p><center>Leftover or unwanted home improvement materials</center></p><br>
 
 </body>
 </html>
