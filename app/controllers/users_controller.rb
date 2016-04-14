@@ -11,7 +11,7 @@ class UsersController < ApplicationController
      @user = User.new(params.require(:user).permit(:name, :email, :password, :password_confirmation))
 
     if @user.save
-      redirect_to @user, "Sign up was successful. Please sign in."
+      redirect_to @user, "Sign up was successful. Please sign in to submit a listing."
     else
       render :new
     end
