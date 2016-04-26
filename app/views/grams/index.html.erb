@@ -9,8 +9,8 @@
 
 <p><center>Post & part with</center></p>
 <p><center>or</center></p>
-<p><center>Cruise & grab</center></p>
-<p><center>Leftover or unwanted home improvement materials</center></p><br>
+<p><center>Cruise & nab</center></p>
+<p><center>Free leftover or unwanted home improvement materials</center></p><br>
 
 <% @grams.each do |gram| %>
   <div class='row'>
@@ -19,7 +19,7 @@
         <div class='panel-heading'>
           <div class='row'>
             <div class='col-sm-6'>
-             <%= link_to gram.user.name, gram.user %>
+             <%= link_to gram.user.first_name, gram.user %>
              <span class='js-user-email-<%= gram.user.id %>'>
               <%= link_to icon('envelope'), gram.user, remote: true %>
               </span>
